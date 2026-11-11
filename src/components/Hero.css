@@ -1,0 +1,44 @@
+.hero-container {
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding-bottom: 70px;
+}
+
+.hero-title, .hero-subtitle{
+    opacity: 0;
+    animation: fadeIn 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-title {
+  font-size: 5rem; 
+  color: rgba(34, 51, 27, 1);   
+  margin: 0 0 15px 0;
+  animation-delay: 0.1s;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  color: rgba(82, 90, 78, 1);   
+  margin: 0;
+  animation-delay: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
