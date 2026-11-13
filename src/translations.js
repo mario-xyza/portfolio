@@ -31,7 +31,7 @@ export const translations = {
       contact: "Contact"
     },
     about: {
-      heading: "About me",
+      heading: "About",
       bio: "I like understanding what's behind the things we use and making them better.",
       availabilityLabel: "Availability",
       availabilityText: "Starting 12/07/2026",

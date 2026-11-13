@@ -15,6 +15,25 @@ function Navbar({texts , lang, onToggleLang}){
                 <a href="#proyectos">{texts.projects}</a>
                 <a href="#habilidades">{texts.skills}</a>
                 <a href="#contacto" className='btn-contacto'>{texts.contact}</a>
+                <div className="lang-toggle" role="group" aria-label="Idioma" data-lang={lang}>
+                    <span className="lang-indicator" aria-hidden="true"></span>
+                    <button
+                    type="button"
+                    className={lang === 'es' ? 'active' : ''}
+                    aria-pressed={lang === 'es'}
+                    onClick={() => lang !== 'es' && onToggleLang()}
+                    >
+                    Español
+                    </button>
+                    <button
+                    type="button"
+                    className={lang === 'en' ? 'active' : ''}
+                    aria-pressed={lang === 'en'}
+                    onClick={() => lang !== 'en' && onToggleLang()}
+                    >
+                    English
+                    </button>
+                </div>
             </nav>
         </header>
     )
