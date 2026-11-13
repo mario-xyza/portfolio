@@ -1,5 +1,5 @@
 .hero-container {
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 85px);
   width: 100%;
   display: flex;
   justify-content: center;
