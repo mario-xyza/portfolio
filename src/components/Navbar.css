@@ -114,3 +114,53 @@
   background-color: rgba(128, 72, 153, 1);
   box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.5), -8px -8px 30px rgba(255, 255, 255, 1)
 }
+
+.lang-toggle {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;   
+  padding: 3px;
+  margin-left: 8px;
+  border-radius: 100px;
+  background: rgba(0, 0, 0, 0.08);  
+}
+
+.lang-indicator {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  width: calc(50% - 3px);
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.lang-toggle[data-lang='en'] .lang-indicator {
+  transform: translateX(100%);
+}
+
+.lang-toggle button {
+  position: relative;     
+  z-index: 1;
+  padding: 6px 16px;
+  border: 0;
+  border-radius: 100px;
+  background: transparent;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(34, 51, 27, 0.6);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.lang-toggle button.active {
+  color: rgb(128, 72, 153);  
+}
+
+.lang-toggle button:focus-visible {
+  outline: 2px solid rgb(128, 72, 153);
+  outline-offset: 2px;
+}
