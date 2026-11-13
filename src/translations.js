@@ -1,5 +1,8 @@
 export const translations = {
   es: {
+    hero: {
+        subtitle: "Estudiante de TI y Desarrollador de Software"
+    },
     navbar: {
       about: "Sobre mí",
       projects: "Proyectos",
@@ -18,6 +21,9 @@ export const translations = {
     }
   },
   en: {
+    hero: {
+        subtitle: "IT Student & Software Developer"
+    },
     navbar: {
       about: "About",
       projects: "Projects",
