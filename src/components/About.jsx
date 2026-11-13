@@ -1,23 +1,23 @@
 import './About.css'
 
-function About() {
+function About({texts}) {
     return (
         <section id='sobre-mi' className='about-container'>
             <div className='about-wrapper'>
-                <h1 className='about-heading cal-sans-regular'>Sobre mí</h1>
+                <h1 className='about-heading cal-sans-regular'>{texts.heading}</h1>
                 <div className='about-divider'></div>
                 <div className='about-grid'>
 
                     <div className='about-left-col'>
-                        <p className='about-bio'>Soy Jesús, estudiante de Ingeniería en TI. Me apasiona el desarrollo de software y la robótica a través de proyectos reales.</p>
+                        <p className='about-bio'>{texts.bio}</p>
                         <div className='about-contact'>
                             <div className="contact-block">
-                                <span className="contact-label">Enfoque</span>
-                                <span className="contact-text">Desarrollo & Robótica</span>
+                                <span className="contact-label">{texts.availabilityLabel}</span>
+                                <span className="contact-text">{texts.availabilityText}</span>
                             </div>
 
                             <div className="contact-block">
-                                <span className="contact-label">Correo</span>
+                                <span className="contact-label">{texts.emailLabel}</span>
                                 <a href="mailto:jesusmmoraleguzm@gmail.com" className="contact-link">
                                     jesusmmoraleguzm@gmail.com
                                 </a>
@@ -28,13 +28,13 @@ function About() {
                     </div>
                     <div className='about-right-col'>
                         <p className='about-text'>
-                            Programo principalmente en Python, Java, C y C++. Mi trabajo se centra en desarrollar software funcional y sistemas aplicados, con experiencia en proyectos de robótica y vehículos autónomos que integran visión por computadora y modelos de lenguaje.
+                            {texts.p1}
                         </p>
                         <p className='about-text'>
-                            Actualmente curso la carrera de Ingeniería en Tecnologías de la Información e Innovación Digital en la Universidad Politécnica de San Luis Potosí, manteniendo un PGA de 9.65/10.0.
+                            {texts.p2}
                         </p>
                         <p className='about-text'>
-                            Soy Vicepresidente del Club de Robótica en la UPSLP, donde organizo torneos e imparto talleres de programación y electrónica. Además, cuento con experiencia mentoreando equipos de robótica (FIRST Tech Challenge y FIRST LEGO League).
+                            {texts.p3}
                         </p>
                     </div>
                 </div>

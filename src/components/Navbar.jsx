@@ -1,6 +1,6 @@
 import './Navbar.css';
 
-function Navbar(){
+function Navbar({texts , lang, onToggleLang}){
     return (
         <header className='navbar-container'>
             <div className='navbar-logo cal-sans-regular'>
@@ -8,10 +8,10 @@ function Navbar(){
             </div>
 
             <nav className='navbar-links'>
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#habilidades">Habilidades</a>
-                <a href="#contacto" className='btn-contacto'>Contacto</a>
+                <a href="#sobre-mi">{texts.about}</a>
+                <a href="#proyectos">{texts.projects}</a>
+                <a href="#habilidades">{texts.skills}</a>
+                <a href="#contacto" className='btn-contacto'>{texts.contact}</a>
             </nav>
         </header>
     )
