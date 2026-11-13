@@ -12,32 +12,78 @@
   background: transparent;
 }
 
-.navbar-container::before{
-    content: '';
+.grad-blur {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; 
+  inset: 0;
+  height: 130%;
+  pointer-events: none;
+  z-index: -1;
+}
 
-  background-color: rgba(192, 214, 190, 0.7);
+.grad-blur::before,
+.grad-blur::after,
+.grad-blur > div {
+  position: absolute;
+  inset: 0;
+}
+
+.grad-blur::before {
+  content: "";
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  mask: linear-gradient(0deg, rgba(0,0,0,0) 0, #000 12.5%, #000 25%, rgba(0,0,0,0) 37.5%);
+  -webkit-mask: linear-gradient(0deg, rgba(0,0,0,0) 0, #000 12.5%, #000 25%, rgba(0,0,0,0) 37.5%);
+  z-index: 1;
+}
+.grad-blur > div:nth-of-type(1) {
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  mask: linear-gradient(0deg, rgba(0,0,0,0) 12.5%, #000 25%, #000 37.5%, rgba(0,0,0,0) 50%);
+  -webkit-mask: linear-gradient(0deg, rgba(0,0,0,0) 12.5%, #000 25%, #000 37.5%, rgba(0,0,0,0) 50%);
+  z-index: 2;
+}
+.grad-blur > div:nth-of-type(2) {
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  mask: linear-gradient(0deg, rgba(0,0,0,0) 25%, #000 37.5%, #000 50%, rgba(0,0,0,0) 62.5%);
+  -webkit-mask: linear-gradient(0deg, rgba(0,0,0,0) 25%, #000 37.5%, #000 50%, rgba(0,0,0,0) 62.5%);
+  z-index: 3;
+}
+.grad-blur > div:nth-of-type(3) {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  mask: linear-gradient(0deg, rgba(0,0,0,0) 37.5%, #000 50%, #000 62.5%, rgba(0,0,0,0) 75%);
+  -webkit-mask: linear-gradient(0deg, rgba(0,0,0,0) 37.5%, #000 50%, #000 62.5%, rgba(0,0,0,0) 75%);
+  z-index: 4;
+}
+.grad-blur > div:nth-of-type(4) {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  mask: linear-gradient(0deg, rgba(0,0,0,0) 50%, #000 62.5%, #000 75%, rgba(0,0,0,0) 87.5%);
+  -webkit-mask: linear-gradient(0deg, rgba(0,0,0,0) 50%, #000 62.5%, #000 75%, rgba(0,0,0,0) 87.5%);
+  z-index: 5;
+}
+.grad-blur > div:nth-of-type(5) {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,      
-    rgba(0, 0, 0, 0.6) 60%, 
-    rgba(0, 0, 0, 0) 90%,  
-    rgba(0, 0, 0, 0) 100%     
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.6) 60%,
-    rgba(0, 0, 0, 0) 90%,
-    rgba(0, 0, 0, 0) 100%
-  );      
+  mask: linear-gradient(0deg, rgba(0,0,0,0) 62.5%, #000 75%, #000 87.5%, rgba(0,0,0,0));
+  -webkit-mask: linear-gradient(0deg, rgba(0,0,0,0) 62.5%, #000 75%, #000 87.5%, rgba(0,0,0,0));
+  z-index: 6;
+}
+.grad-blur > div:nth-of-type(6) {
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  mask: linear-gradient(0deg, rgba(0,0,0,0) 75%, #000 87.5%, #000);
+  -webkit-mask: linear-gradient(0deg, rgba(0,0,0,0) 75%, #000 87.5%, #000);
+  z-index: 7;
+}
+.grad-blur::after {
+  content: "";
+  backdrop-filter: blur(64px);
+  -webkit-backdrop-filter: blur(64px);
+  mask: linear-gradient(0deg, rgba(0,0,0,0) 87.5%, #000);
+  -webkit-mask: linear-gradient(0deg, rgba(0,0,0,0) 87.5%, #000);
+  z-index: 8;
 }
 
 .navbar-logo a {

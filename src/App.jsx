@@ -16,6 +16,7 @@ function App() {
   return (
     <>
     <div>
+      <div className="texture" aria-hidden="true"></div>
       <Navbar texts={t.navbar} lang={lang} onToggleLang={toggleLanguage} />
       <Hero texts={t.hero}/>
       <About texts={t.about}/>

@@ -3,6 +3,9 @@ import './Navbar.css';
 function Navbar({texts , lang, onToggleLang}){
     return (
         <header className='navbar-container'>
+            <div className='grad-blur' aria-hidden="true">
+                <div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
             <div className='navbar-logo cal-sans-regular'>
                 <a href="#inicio">Jesús Morales</a>
             </div>
