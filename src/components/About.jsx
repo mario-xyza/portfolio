@@ -18,8 +18,8 @@ function About({texts}) {
 
                             <div className="contact-block">
                                 <span className="contact-label">{texts.emailLabel}</span>
-                                <a href="mailto:jesusmmoraleguzm@gmail.com" className="contact-link">
-                                    jesusmmoraleguzm@gmail.com
+                                <a href="mailto:jesusmmoralesguzm@gmail.com" className="contact-link">
+                                    jesusmmoralesguzm@gmail.com
                                 </a>
                             </div>
 
