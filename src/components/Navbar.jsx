@@ -7,7 +7,7 @@ function Navbar({texts , lang, onToggleLang}){
                 <div></div><div></div><div></div><div></div><div></div><div></div>
             </div>
             <div className='navbar-logo cal-sans-regular'>
-                <a href="#inicio">Jesús Morales</a>
+                <a href="#">Jesús Morales</a>
             </div>
 
             <nav className='navbar-links'>
