@@ -8,7 +8,7 @@
   align-items: center;
   padding: 0 50px;
   box-sizing: border-box;
-  z-index: 1000;
+  z-index: 1002;
   background: transparent;
 }
 
@@ -151,7 +151,7 @@
   font: inherit;
   font-size: 0.9rem;
   font-weight: 600;
-  color: rgba(34, 51, 27, 0.6);
+  color: rgba(34, 51, 27, 1);
   cursor: pointer;
   transition: color 0.3s ease;
 }
