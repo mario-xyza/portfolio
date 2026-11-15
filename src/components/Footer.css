@@ -3,7 +3,7 @@
   box-sizing: border-box;
   padding: 36px 50px;
   background: rgb(24, 33, 21); 
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 1);
 }
 
 .footer-inner {
@@ -37,13 +37,8 @@
 
 .footer-socials svg {
   display: block;
-  width: 26px;
-  height: 26px;
-}
-
-.footer-socials a:hover {
-  color: rgba(192, 214, 190, 1);
-  transform: translateY(-2px);
+  width: 32px;
+  height: 32px;
 }
 
 .footer-socials a:focus-visible {
