@@ -24,6 +24,7 @@ export const translations = {
             viewProject: 'Ver proyecto',
         },
         skills: { heading: 'Habilidades' },
+        footer: { text: 'Diseñado y programado por Jesús Morales' }
     },
     en: {
         hero: {
@@ -49,6 +50,7 @@ export const translations = {
             heading: 'Projects',
             viewProject: 'View project',
         },
-        skills: { heading: 'Skills' }
+        skills: { heading: 'Skills' },
+        footer: { text: 'Designed and coded by Jesús Morales' }
     }
 };
