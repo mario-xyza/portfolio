@@ -1,5 +1,5 @@
 import { categories, skills } from '../skills';
-//import './Skills.css';
+import './Skills.css';
 
 function Skills({ texts, lang }) {
   return (
