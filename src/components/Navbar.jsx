@@ -14,7 +14,6 @@ function Navbar({texts , lang, onToggleLang}){
                 <a href="#sobre-mi">{texts.about}</a>
                 <a href="#proyectos">{texts.projects}</a>
                 <a href="#habilidades">{texts.skills}</a>
-                <a href="#contacto" className='btn-contacto'>{texts.contact}</a>
                 <div className="lang-toggle" role="group" aria-label="Idioma" data-lang={lang}>
                     <span className="lang-indicator" aria-hidden="true"></span>
                     <button
