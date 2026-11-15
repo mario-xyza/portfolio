@@ -7,9 +7,18 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
 
+const getInitialLang = () => {
+  try {
+    const saved = localStorage.getItem('lang');
+    if (saved === 'es' || saved === 'en') return saved;
+  } catch {
+  }
+  return navigator.language?.toLowerCase().startsWith('es') ? 'es' : 'en';
+};
+
 function App() {
 
-  const [lang, setLang] = useState('es');
+  const [lang, setLang] = useState(getInitialLang());
   const t = translations[lang];
 
   const toggleLanguage = () => {
