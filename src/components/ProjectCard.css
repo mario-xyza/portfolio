@@ -1,0 +1,113 @@
+.project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 0;
+}
+
+.project-card.reverse .project-info {
+    order: 2;
+}
+
+.project-card.reverse .project-media,
+.project-card.reverse .project-media-gallery {
+    order: 1;
+}
+
+.project-meta {
+    margin: 0 0 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(34, 51, 27, 0.5);
+}
+
+.project-title {
+    margin: 0 0 20px;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.25;
+    color: rgba(34, 51, 27, 1);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.project-tag {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgb(128, 72, 153);
+    background: rgba(128, 72, 153, 0.12);
+}
+
+.project-tag.muted {
+    color: rgba(34, 51, 27, 0.7);
+    background: rgba(34, 51, 27, 0.08);
+}
+
+.project-desc {
+    margin: 0 0 28px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(34, 51, 27, 0.75);
+}
+
+.project-link {
+    display: inline-flex;
+    gap: 8px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(34, 51, 27, 1);
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+    color: rgb(128, 72, 153);
+    transform: translateX(6px);
+}
+
+.project-media {
+    overflow: hidden;
+    border-radius: 12px;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(135deg, rgba(192, 214, 190, 1), rgba(128, 72, 153, 0.35));
+}
+
+.project-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-media img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .project-card {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 40px 0;
+    }
+
+    .project-card.reverse .project-info,
+    .project-card.reverse .project-media,
+    .project-card.reverse .project-media-gallery {
+        order: 0;
+    }
+}
